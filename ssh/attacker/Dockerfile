@@ -1,7 +1,8 @@
-FROM solita/ubuntu-systemd
+FROM jrei/systemd-ubuntu
 
 # Instalacja SSH i dodatkowych narzędzi
 RUN apt-get update && apt-get install -y openssh-server net-tools iproute2 inetutils-ping
+RUN mkdir /var/run/sshd
 
 # Dodanie użytkownika
 RUN useradd -m -s /bin/bash user-server && \
@@ -15,4 +16,4 @@ RUN dpkg-reconfigure openssh-server
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/lib/systemd/systemd"]
