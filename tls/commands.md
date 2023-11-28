@@ -1,5 +1,5 @@
 ```
-docker run --name some-nginx -p 8080:8080 -d nginx
+docker run --name nginx -p 8080:8080 -d nginx
 ```
 
 ```
