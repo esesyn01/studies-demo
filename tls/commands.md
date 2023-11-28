@@ -29,7 +29,7 @@ nano /etc/nginx/conf.d/default.conf
 listen 8080 ssl;
 ssl_certificate /ścieżka/do/localhost.pem;
 ssl_certificate_key /ścieżka/do/localhost-key.pem;
-
+ssl_protocols TLSv1.3;
 
 nginx -s reload
 ```
