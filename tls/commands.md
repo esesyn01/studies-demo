@@ -24,7 +24,7 @@ mkcert localhost
 ```
 
 ```
-nano /etc/nginx/conf.d/nginx.conf
+nano /etc/nginx/conf.d/default.conf
 
 listen 8080 ssl;
 ssl_certificate /ścieżka/do/localhost.pem;
