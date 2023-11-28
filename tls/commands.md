@@ -3,7 +3,7 @@ docker run --name nginx -p 8080:8080 -d nginx
 ```
 
 ```
-nano /etc/nginx/conf.d/nginx.conf
+nano /etc/nginx/conf.d/default.conf
 
 zmienić port z 80 na 8080
 
